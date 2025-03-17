@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-secondary text-dark font-sans;
+}
+
+.nav-link {
+  @apply relative font-serif text-white text-lg tracking-wider hover:opacity-80 transition-opacity;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.service-icon {
+  @apply rounded-full overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer;
+}
+
+.hero-text {
+  @apply font-serif text-white text-6xl md:text-7xl lg:text-8xl leading-tight;
+}
+
+.section-title {
+  @apply font-serif text-3xl md:text-4xl mb-6 text-primary-dark;
+}
+
+.btn-primary {
+  @apply bg-secondary-dark text-dark px-6 py-3 rounded-full font-serif tracking-wider hover:bg-primary hover:text-white transition-all duration-300;
+}
